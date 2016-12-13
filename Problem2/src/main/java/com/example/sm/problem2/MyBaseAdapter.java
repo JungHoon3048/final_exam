@@ -7,17 +7,17 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import java.util.ArrayList;
 
-public class MyBaseAdapter extends BaseAdapter implements AdapterView.OnItemClickListener{
+public class MyBaseAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
 
     Context mContext = null;
     ArrayList<Employee> mData = null;
     LayoutInflater mLayoutInflater = null;
     public int selected_position;
 
-    MyBaseAdapter(  Context context, ArrayList<Employee> data){
+    MyBaseAdapter(Context context, ArrayList<Employee> data) {
         mContext = context;
         mData = data;
         mLayoutInflater = LayoutInflater.from(mContext);
@@ -54,18 +54,18 @@ public class MyBaseAdapter extends BaseAdapter implements AdapterView.OnItemClic
         return position;
     }
 
-    public void add(Employee employee){
+    public void add(Employee employee) {
         mData.add(employee);
         notifyDataSetChanged();
     }
 
-    public void delete(int index){
+    public void delete(int index) {
         mData.remove(index);
         notifyDataSetChanged();
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // need something here
+        return getDropDownView(position,convertView,parent);
     }
 }

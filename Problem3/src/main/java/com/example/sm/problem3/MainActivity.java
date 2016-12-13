@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 // need something here
-            } catch (InterruptedException e) { }
+            } catch (InterruptedException e) {
+
+            }
         }
 
         manager.sort();
@@ -71,6 +73,9 @@ class Customer extends Person{
     }
 
     // need something here
+    public void work() {
+
+    }
 }
 
 

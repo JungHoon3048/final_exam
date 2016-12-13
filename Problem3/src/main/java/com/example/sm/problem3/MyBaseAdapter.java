@@ -5,19 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-
-/**
- * Created by sm on 12/12/16.
- */
 
 public class MyBaseAdapter extends BaseAdapter{
 
     Context mContetxt = null;
     ArrayList<Customer> mData = null;
     LayoutInflater mLayoutInflater = null;
+    View itemLayout;
 
     MyBaseAdapter(  Context context, ArrayList<Customer> data){
         mContetxt = context;

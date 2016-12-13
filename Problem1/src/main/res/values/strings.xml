@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Problem1</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_pedometer">Pedometer</string>
 </resources>
